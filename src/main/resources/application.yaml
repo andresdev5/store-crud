@@ -1,0 +1,26 @@
+server:
+  port: 8000
+
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/store-crud
+    username: postgres
+    password: postgres
+
+security:
+  key: "Definitely-Fresh-Artifact-7552-15"
+
+# enable sql logging output
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
